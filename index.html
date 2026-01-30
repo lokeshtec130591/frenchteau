@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFT | Professional IT Solutions Québec</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <svg class="floating-shape shape-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#6366f1"
+                d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-0.9C87,14.6,81.4,29.2,73.1,42.8C64.8,56.4,53.8,69,40.1,75.1C26.4,81.2,11,80.8,-3.9,77.8C-18.8,74.8,-37.6,69.2,-51.8,59.6C-66,50,-75.6,36.4,-80.7,21.1C-85.8,5.8,-86.4,-11.2,-81.1,-26.3C-75.8,-41.4,-64.6,-54.6,-50.8,-61.9C-37,-69.2,-20.6,-70.6,-4.8,-73.8C11,-77,44.7,-76.4,44.7,-76.4Z"
+                transform="translate(100 100)" />
+        </svg>
+        <svg class="floating-shape shape-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#a855f7"
+                d="M39.5,-65.6C51.4,-58.5,61.6,-47.8,68.2,-35.1C74.8,-22.4,77.8,-7.7,76.3,6.3C74.8,20.3,68.8,33.6,59.8,44.2C50.8,54.8,38.8,62.7,25.3,67.8C11.8,72.9,-3.2,75.2,-17.3,72.8C-31.4,70.4,-44.6,63.3,-55.2,53.1C-65.8,42.9,-73.8,29.6,-76.4,15.3C-79,-0.9,-76.2,-18.1,-68.9,-33C-61.6,-47.9,-49.8,-60.5,-36.3,-67C-22.8,-73.5,-7.6,-74,-0.3,-73.5C7,-73,39.5,-65.6,39.5,-65.6Z"
+                transform="translate(100 100)" />
+        </svg>
+        <svg class="floating-shape shape-3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ec4899"
+                d="M41.3,-71.8C54.4,-64.4,66.3,-54.5,73.5,-41.8C80.7,-29.1,83.2,-13.5,82.1,1.7C81,16.9,76.3,31.7,68.1,44.2C59.9,56.7,48.2,66.9,34.8,72.8C21.4,78.7,6.3,80.3,-8.5,77.8C-23.3,75.3,-37.8,68.7,-50.4,59.5C-63,50.3,-73.7,38.5,-78.8,24.8C-83.9,11.1,-83.4,-4.5,-78.2,-18.5C-73,-32.5,-63.1,-44.9,-50.8,-52.5C-38.5,-60.1,-23.8,-62.9,-10.1,-66.2C3.6,-69.5,28.2,-79.2,41.3,-71.8Z"
+                transform="translate(100 100)" />
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Frenchteau Tech Solutions</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="lang-btn" onclick="toggleLanguage()">FR / EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero/Banner Section -->
+    <section class="hero-banner" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <!-- English Version -->
+                <div class="lang-section lang-en active">
+                    <h1>
+                        <span class="word">Modern</span>
+                        <span class="word gradient-text">IT</span>
+                        <span class="word gradient-text">Solutions</span><br>
+                        <span class="word">for Your Business</span>
+                    </h1>
+                    <p>Professional computer services designed for reliability, security, and growth. Serving businesses
+                        across Québec with expertise you can trust.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">View Services</a>
+                        <a href="#contact" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- French Version -->
+                <div class="lang-section lang-fr">
+                    <h1>
+                        <span class="word gradient-text">Solutions</span>
+                        <span class="word gradient-text">informatiques</span><br>
+                        <span class="word">modernes pour</span><br>
+                        <span class="word">votre entreprise</span>
+                    </h1>
+                    <p>Services informatiques professionnels conçus pour la fiabilité, la sécurité et la croissance. Au
+                        service des entreprises du Québec avec une expertise de confiance.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">Voir les services</a>
+                        <a href="#contact" class="btn btn-outline">Commencer</a>
+                    </div>
+                </div>
+
+                <!-- Feature Banner -->
+                <div class="feature-banner">
+                    <div class="feature-banner-grid">
+                        <div class="feature-banner-item">
+                            <div class="feature-banner-icon">⚡</div>
+                            <div class="feature-banner-text lang-section lang-en active">Fast Support</div>
+                            <div class="feature-banner-text lang-section lang-fr">Support rapide</div>
+                        </div>
+                        <div class="feature-banner-item">
+                            <div class="feature-banner-icon">🔒</div>
+                            <div class="feature-banner-text lang-section lang-en active">Secure</div>
+                            <div class="feature-banner-text lang-section lang-fr">Sécurisé</div>
+                        </div>
+                        <div class="feature-banner-item">
+                            <div class="feature-banner-icon">24/7</div>
+                            <div class="feature-banner-text lang-section lang-en active">Available</div>
+                            <div class="feature-banner-text lang-section lang-fr">Disponible</div>
+                        </div>
+                        <div class="feature-banner-item">
+                            <div class="feature-banner-icon">✓</div>
+                            <div class="feature-banner-text lang-section lang-en active">Reliable</div>
+                            <div class="feature-banner-text lang-section lang-fr">Fiable</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated SVG Visual -->
+            <div class="hero-visual">
+                <div class="hero-svg-container">
+                    <!-- Particles -->
+                    <div class="particles">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+
+                    <!-- Main SVG Illustration -->
+                    <svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Animated Circles Background -->
+                        <g opacity="0.3">
+                            <circle cx="300" cy="300" r="250" fill="none" stroke="url(#grad1)" stroke-width="2">
+                                <animate attributeName="r" values="250;260;250" dur="4s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="300" cy="300" r="200" fill="none" stroke="url(#grad2)" stroke-width="2">
+                                <animate attributeName="r" values="200;210;200" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="300" cy="300" r="150" fill="none" stroke="url(#grad3)" stroke-width="2">
+                                <animate attributeName="r" values="150;160;150" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+
+                        <!-- Central Computer/Server -->
+                        <g class="main-device">
+                            <rect x="220" y="220" width="160" height="160" rx="20" fill="url(#deviceGrad)"
+                                stroke="#6366f1" stroke-width="4">
+                                <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite" />
+                            </rect>
+
+                            <!-- Screen Display -->
+                            <rect x="240" y="240" width="120" height="80" rx="5" fill="#0f172a" />
+
+                            <!-- Code Lines -->
+                            <g class="code-lines">
+                                <rect x="250" y="250" width="60" height="6" rx="3" fill="#6366f1">
+                                    <animate attributeName="width" values="60;90;60" dur="2s"
+                                        repeatCount="indefinite" />
+                                </rect>
+                                <rect x="250" y="265" width="80" height="6" rx="3" fill="#a855f7">
+                                    <animate attributeName="width" values="80;100;80" dur="2.5s"
+                                        repeatCount="indefinite" />
+                                </rect>
+                                <rect x="250" y="280" width="70" height="6" rx="3" fill="#ec4899">
+                                    <animate attributeName="width" values="70;95;70" dur="3s"
+                                        repeatCount="indefinite" />
+                                </rect>
+                                <rect x="250" y="295" width="90" height="6" rx="3" fill="#6366f1">
+                                    <animate attributeName="width" values="90;110;90" dur="2.2s"
+                                        repeatCount="indefinite" />
+                                </rect>
+                            </g>
+
+                            <!-- Status Indicators -->
+                            <circle cx="250" cy="345" r="5" fill="#10b981">
+                                <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="270" cy="345" r="5" fill="#10b981">
+                                <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="290" cy="345" r="5" fill="#10b981">
+                                <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+
+                        <!-- Floating Icons Around -->
+                        <g class="floating-icons">
+                            <!-- Cloud Icon -->
+                            <g opacity="0.8">
+                                <circle cx="150" cy="200" r="35" fill="url(#iconGrad1)">
+                                    <animateTransform attributeName="transform" type="translate"
+                                        values="0,0; 0,-20; 0,0" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                                <text x="150" y="212" font-size="28" text-anchor="middle" fill="white">☁️</text>
+                            </g>
+
+                            <!-- Lock Icon -->
+                            <g opacity="0.8">
+                                <circle cx="450" cy="200" r="35" fill="url(#iconGrad2)">
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; 0,15; 0,0"
+                                        dur="3.5s" repeatCount="indefinite" />
+                                </circle>
+                                <text x="450" y="212" font-size="28" text-anchor="middle" fill="white">🔒</text>
+                            </g>
+
+                            <!-- Rocket Icon -->
+                            <g opacity="0.8">
+                                <circle cx="150" cy="400" r="35" fill="url(#iconGrad3)">
+                                    <animateTransform attributeName="transform" type="translate"
+                                        values="0,0; 0,-25; 0,0" dur="5s" repeatCount="indefinite" />
+                                </circle>
+                                <text x="150" y="412" font-size="28" text-anchor="middle" fill="white">🚀</text>
+                            </g>
+
+                            <!-- Lightning Icon -->
+                            <g opacity="0.8">
+                                <circle cx="450" cy="400" r="35" fill="url(#iconGrad4)">
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; 0,20; 0,0"
+                                        dur="3s" repeatCount="indefinite" />
+                                </circle>
+                                <text x="450" y="412" font-size="28" text-anchor="middle" fill="white">⚡</text>
+                            </g>
+
+                            <!-- Data Icon -->
+                            <g opacity="0.8">
+                                <circle cx="300" cy="120" r="30" fill="url(#iconGrad5)">
+                                    <animateTransform attributeName="transform" type="translate"
+                                        values="0,0; 0,-15; 0,0" dur="4.5s" repeatCount="indefinite" />
+                                </circle>
+                                <text x="300" y="130" font-size="24" text-anchor="middle" fill="white">📊</text>
+                            </g>
+
+                            <!-- Shield Icon -->
+                            <g opacity="0.8">
+                                <circle cx="300" cy="480" r="30" fill="url(#iconGrad6)">
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; 0,18; 0,0"
+                                        dur="3.8s" repeatCount="indefinite" />
+                                </circle>
+                                <text x="300" y="490" font-size="24" text-anchor="middle" fill="white">🛡️</text>
+                            </g>
+                        </g>
+
+                        <!-- Connection Lines -->
+                        <g stroke="#6366f1" stroke-width="2" stroke-dasharray="5,5" opacity="0.3">
+                            <line x1="185" y1="200" x2="250" y2="250">
+                                <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s"
+                                    repeatCount="indefinite" />
+                            </line>
+                            <line x1="415" y1="200" x2="350" y2="250">
+                                <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s"
+                                    repeatCount="indefinite" />
+                            </line>
+                            <line x1="185" y1="400" x2="250" y2="350">
+                                <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s"
+                                    repeatCount="indefinite" />
+                            </line>
+                            <line x1="415" y1="400" x2="350" y2="350">
+                                <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s"
+                                    repeatCount="indefinite" />
+                            </line>
+                        </g>
+
+                        <!-- Gradients -->
+                        <defs>
+                            <linearGradient id="grad1">
+                                <stop offset="0%" stop-color="#6366f1" />
+                                <stop offset="100%" stop-color="#a855f7" />
+                            </linearGradient>
+                            <linearGradient id="grad2">
+                                <stop offset="0%" stop-color="#a855f7" />
+                                <stop offset="100%" stop-color="#ec4899" />
+                            </linearGradient>
+                            <linearGradient id="grad3">
+                                <stop offset="0%" stop-color="#ec4899" />
+                                <stop offset="100%" stop-color="#6366f1" />
+                            </linearGradient>
+                            <linearGradient id="deviceGrad">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#f0f4ff" />
+                            </linearGradient>
+                            <linearGradient id="iconGrad1">
+                                <stop offset="0%" stop-color="#6366f1" />
+                                <stop offset="100%" stop-color="#8b5cf6" />
+                            </linearGradient>
+                            <linearGradient id="iconGrad2">
+                                <stop offset="0%" stop-color="#8b5cf6" />
+                                <stop offset="100%" stop-color="#a855f7" />
+                            </linearGradient>
+                            <linearGradient id="iconGrad3">
+                                <stop offset="0%" stop-color="#ec4899" />
+                                <stop offset="100%" stop-color="#f43f5e" />
+                            </linearGradient>
+                            <linearGradient id="iconGrad4">
+                                <stop offset="0%" stop-color="#f59e0b" />
+                                <stop offset="100%" stop-color="#f97316" />
+                            </linearGradient>
+                            <linearGradient id="iconGrad5">
+                                <stop offset="0%" stop-color="#14b8a6" />
+                                <stop offset="100%" stop-color="#06b6d4" />
+                            </linearGradient>
+                            <linearGradient id="iconGrad6">
+                                <stop offset="0%" stop-color="#10b981" />
+                                <stop offset="100%" stop-color="#059669" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats scroll-reveal">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label lang-section lang-en active">Years Experience</div>
+                <div class="stat-label lang-section lang-fr">Années d'expérience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label lang-section lang-en active">Projects Completed</div>
+                <div class="stat-label lang-section lang-fr">Projets réalisés</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label lang-section lang-en active">Client Satisfaction</div>
+                <div class="stat-label lang-section lang-fr">Satisfaction client</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label lang-section lang-en active">Support Available</div>
+                <div class="stat-label lang-section lang-fr">Support disponible</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about scroll-reveal" id="about">
+        <div class="about-container">
+            <!-- English Version -->
+            <div class="about-content lang-section lang-en active">
+                <h2>About <span class="gradient-text">SFT</span></h2>
+                <p><strong>Solutions Frenchteau Tech</strong> is a trusted individual enterprise based in Hudson,
+                    Québec. We specialize in delivering comprehensive computer-related services that empower businesses
+                    to operate efficiently and securely.</p>
+                <p>With over a decade of experience, we understand the unique challenges faced by Québec businesses. Our
+                    mission is simple: provide reliable, professional IT solutions that let you focus on what you do
+                    best.</p>
+
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h4>Certified Professionals</h4>
+                            <p>Our team holds industry-recognized certifications and stays current with technology
+                                trends.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h4>Local Expertise</h4>
+                            <p>Based in Québec, we understand local business needs and regulatory requirements.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h4>Proven Track Record</h4>
+                            <p>Hundreds of successful projects and satisfied clients across various industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- French Version -->
+            <div class="about-content lang-section lang-fr">
+                <h2>À propos de <span class="gradient-text">SFT</span></h2>
+                <p><strong>Solutions Frenchteau Tech</strong> est une entreprise individuelle de confiance située à
+                    Hudson, Québec. Nous sommes spécialisés dans la fourniture de services informatiques complets qui
+                    permettent aux entreprises de fonctionner efficacement et en toute sécurité.</p>
+                <p>Avec plus d'une décennie d'expérience, nous comprenons les défis uniques auxquels font face les
+                    entreprises québécoises. Notre mission est simple : fournir des solutions informatiques fiables et
+                    professionnelles qui vous permettent de vous concentrer sur ce que vous faites de mieux.</p>
+
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h4>Professionnels certifiés</h4>
+                            <p>Notre équipe détient des certifications reconnues dans l'industrie et se tient à jour
+                                avec les tendances technologiques.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h4>Expertise locale</h4>
+                            <p>Basés au Québec, nous comprenons les besoins des entreprises locales et les exigences
+                                réglementaires.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h4>Bilan éprouvé</h4>
+                            <p>Des centaines de projets réussis et de clients satisfaits dans divers secteurs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image">
+                <div class="about-image-content">🚀</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services scroll-reveal" id="services">
+        <!-- English Version -->
+        <div class="lang-section lang-en active">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Complete IT solutions tailored to your business needs</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-emoji">⚙️</div>
+                    <h3>System Management</h3>
+                    <p>Complete infrastructure management with 24/7 monitoring, automated maintenance, and proactive
+                        system optimization to ensure maximum uptime.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">📊</div>
+                    <h3>Data Solutions</h3>
+                    <p>Secure data processing, backup solutions, cloud storage integration, and intelligent management
+                        systems to protect your valuable business data.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">💳</div>
+                    <h3>Payment Systems</h3>
+                    <p>Secure debit & credit system integration, PCI compliance solutions, and reliable transaction
+                        processing for safe payment operations.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">🔧</div>
+                    <h3>Technical Support</h3>
+                    <p>Expert hardware repair, system troubleshooting, and rapid-response technical assistance available
+                        when your business needs it most.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">🛡️</div>
+                    <h3>IT Consulting</h3>
+                    <p>Strategic technology planning, architecture design, security assessments, and digital
+                        transformation guidance for long-term success.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">📝</div>
+                    <h3>Contract Services</h3>
+                    <p>Flexible computer-related contract services customized to your unique business requirements and
+                        operational schedule.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- French Version -->
+        <div class="lang-section lang-fr">
+            <h2 class="section-title">Nos Services</h2>
+            <p class="section-subtitle">Solutions informatiques complètes adaptées aux besoins de votre entreprise</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-emoji">⚙️</div>
+                    <h3>Gestion des systèmes</h3>
+                    <p>Gestion complète de l'infrastructure avec surveillance 24/7, maintenance automatisée et
+                        optimisation proactive des systèmes pour assurer une disponibilité maximale.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">📊</div>
+                    <h3>Solutions de données</h3>
+                    <p>Traitement sécurisé des données, solutions de sauvegarde, intégration du stockage cloud et
+                        systèmes de gestion intelligents pour protéger vos données d'entreprise précieuses.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">💳</div>
+                    <h3>Systèmes de paiement</h3>
+                    <p>Intégration sécurisée des systèmes débit/crédit, solutions de conformité PCI et traitement fiable
+                        des transactions pour des opérations de paiement sûres.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">🔧</div>
+                    <h3>Support technique</h3>
+                    <p>Réparation de matériel expert, dépannage des systèmes et assistance technique à réponse rapide
+                        disponible quand votre entreprise en a le plus besoin.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">🛡️</div>
+                    <h3>Conseil informatique</h3>
+                    <p>Planification technologique stratégique, conception d'architecture, évaluations de sécurité et
+                        accompagnement de transformation numérique pour un succès à long terme.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-emoji">📝</div>
+                    <h3>Services contractuels</h3>
+                    <p>Services informatiques contractuels flexibles personnalisés selon vos exigences commerciales
+                        uniques et votre horaire opérationnel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose scroll-reveal">
+        <!-- English Version -->
+        <div class="lang-section lang-en active">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">The advantages of partnering with Solutions Frenchteau Tech</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h3>Tailored Solutions</h3>
+                        <p>We don't believe in one-size-fits-all. Every solution is customized to match your specific
+                            business needs, goals, and budget.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-content">
+                        <h3>Rapid Response</h3>
+                        <p>Technical issues can't wait. Our team provides fast, efficient support to minimize downtime
+                            and keep your business running smoothly.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔐</div>
+                    <div class="benefit-content">
+                        <h3>Security First</h3>
+                        <p>We prioritize data security and compliance, implementing industry-best practices to protect
+                            your business from cyber threats.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h3>Cost-Effective</h3>
+                        <p>Get enterprise-level IT services without enterprise prices. We deliver maximum value while
+                            respecting your budget constraints.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h3>Scalable Growth</h3>
+                        <p>Our solutions grow with your business. We design systems that can scale seamlessly as your
+                            needs evolve.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-content">
+                        <h3>Long-Term Partnership</h3>
+                        <p>We're not just vendors—we're partners invested in your success. We build lasting
+                            relationships based on trust and results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- French Version -->
+        <div class="lang-section lang-fr">
+            <h2 class="section-title">Pourquoi nous choisir</h2>
+            <p class="section-subtitle">Les avantages de collaborer avec Solutions Frenchteau Tech</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h3>Solutions sur mesure</h3>
+                        <p>Nous ne croyons pas aux solutions universelles. Chaque solution est personnalisée pour
+                            correspondre à vos besoins, objectifs et budget spécifiques.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-content">
+                        <h3>Réponse rapide</h3>
+                        <p>Les problèmes techniques ne peuvent pas attendre. Notre équipe fournit un support rapide et
+                            efficace pour minimiser les temps d'arrêt.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔐</div>
+                    <div class="benefit-content">
+                        <h3>Sécurité d'abord</h3>
+                        <p>Nous priorisons la sécurité des données et la conformité, en mettant en œuvre les meilleures
+                            pratiques de l'industrie pour protéger votre entreprise.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h3>Rentable</h3>
+                        <p>Obtenez des services informatiques de niveau entreprise sans prix d'entreprise. Nous offrons
+                            une valeur maximale tout en respectant votre budget.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h3>Croissance évolutive</h3>
+                        <p>Nos solutions évoluent avec votre entreprise. Nous concevons des systèmes qui peuvent évoluer
+                            de manière transparente selon vos besoins.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-content">
+                        <h3>Partenariat à long terme</h3>
+                        <p>Nous ne sommes pas que des fournisseurs—nous sommes des partenaires investis dans votre
+                            succès. Nous construisons des relations durables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process scroll-reveal">
+        <!-- English Version -->
+        <div class="lang-section lang-en active">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle">Our simple, effective process to get you started</p>
+
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>We discuss your needs, challenges, and goals to understand your business.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Strategy</h3>
+                    <p>We develop a customized plan tailored to your specific requirements.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>Our experts execute the solution with minimal disruption to your operations.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Support</h3>
+                    <p>We provide ongoing maintenance and support to ensure continued success.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- French Version -->
+        <div class="lang-section lang-fr">
+            <h2 class="section-title">Comment nous travaillons</h2>
+            <p class="section-subtitle">Notre processus simple et efficace pour vous aider à démarrer</p>
+
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>Nous discutons de vos besoins, défis et objectifs pour comprendre votre entreprise.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Stratégie</h3>
+                    <p>Nous développons un plan personnalisé adapté à vos exigences spécifiques.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Mise en œuvre</h3>
+                    <p>Nos experts exécutent la solution avec une perturbation minimale de vos opérations.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Support</h3>
+                    <p>Nous fournissons une maintenance et un support continus pour assurer un succès durable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials scroll-reveal">
+        <!-- English Version -->
+        <div class="lang-section lang-en active">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Real feedback from businesses we've helped</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"SFT transformed our IT infrastructure completely. Their team is
+                        professional, responsive, and truly understands business needs. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>Jean Dubois</h4>
+                            <p>CEO, Local Retail Chain</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Outstanding service! They implemented our payment system flawlessly and
+                        provided excellent training. Our operations have never been smoother."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>Marie Lavoie</h4>
+                            <p>Owner, Boutique Shop</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The best IT partner we've ever had. Fast response times, expert
+                        knowledge, and they actually care about our success. Worth every penny!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PT</div>
+                        <div class="author-info">
+                            <h4>Pierre Tremblay</h4>
+                            <p>Manager, Manufacturing Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- French Version -->
+        <div class="lang-section lang-fr">
+            <h2 class="section-title">Ce que disent nos clients</h2>
+            <p class="section-subtitle">Commentaires réels d'entreprises que nous avons aidées</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"SFT a complètement transformé notre infrastructure informatique. Leur
+                        équipe est professionnelle, réactive et comprend vraiment les besoins des entreprises. Hautement
+                        recommandé!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>Jean Dubois</h4>
+                            <p>PDG, Chaîne de vente au détail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Service exceptionnel! Ils ont implémenté notre système de paiement
+                        parfaitement et ont fourni une excellente formation. Nos opérations n'ont jamais été aussi
+                        fluides."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>Marie Lavoie</h4>
+                            <p>Propriétaire, Boutique</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Le meilleur partenaire informatique que nous ayons jamais eu. Temps de
+                        réponse rapides, connaissances d'expert et ils se soucient vraiment de notre succès. Vaut chaque
+                        centime!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PT</div>
+                        <div class="author-info">
+                            <h4>Pierre Tremblay</h4>
+                            <p>Gestionnaire, Entreprise manufacturière</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <!-- English Version -->
+        <div class="lang-section lang-en active">
+            <h2>Ready to Transform Your IT?</h2>
+            <p>Let's discuss how we can help your business thrive with modern technology solutions.</p>
+            <a href="#contact" class="btn-white">Get Started Today</a>
+        </div>
+
+        <!-- French Version -->
+        <div class="lang-section lang-fr">
+            <h2>Prêt à transformer votre informatique?</h2>
+            <p>Discutons de la façon dont nous pouvons aider votre entreprise à prospérer avec des solutions
+                technologiques modernes.</p>
+            <a href="#contact" class="btn-white">Commencer aujourd'hui</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact scroll-reveal" id="contact">
+        <div class="contact-container">
+            <!-- English Version -->
+            <div class="contact-left">
+                <div class="lang-section lang-en active">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions or ready to start a project? We're here to help. Reach out to us through any of
+                        the channels below or fill out the contact form.</p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📍</div>
+                            <div class="contact-info-text">
+                                <h4>Our Location</h4>
+                                <p>510 rue Main<br>Hudson, Québec J0P 1H0<br>Canada</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📧</div>
+                            <div class="contact-info-text">
+                                <h4>Email Us</h4>
+                                <p>info@frenchteautech.com<br>support@frenchteautech.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">🕒</div>
+                            <div class="contact-info-text">
+                                <h4>Business Hours</h4>
+                                <p>Monday – Friday<br>9:00 AM – 6:00 PM EST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- French Version -->
+                <div class="lang-section lang-fr">
+                    <h2>Contactez-nous</h2>
+                    <p>Vous avez des questions ou êtes prêt à démarrer un projet? Nous sommes là pour vous aider.
+                        Contactez-nous par l'un des canaux ci-dessous ou remplissez le formulaire de contact.</p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📍</div>
+                            <div class="contact-info-text">
+                                <h4>Notre emplacement</h4>
+                                <p>510 rue Main<br>Hudson, Québec J0P 1H0<br>Canada</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">📧</div>
+                            <div class="contact-info-text">
+                                <h4>Envoyez-nous un courriel</h4>
+                                <p>info@frenchteautech.com<br>support@frenchteautech.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">🕒</div>
+                            <div class="contact-info-text">
+                                <h4>Heures d'ouverture</h4>
+                                <p>Lundi – Vendredi<br>9h00 – 18h00 HNE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label class="lang-section lang-en active">Your Name</label>
+                        <label class="lang-section lang-fr">Votre nom</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="lang-section lang-en active">Email Address</label>
+                        <label class="lang-section lang-fr">Adresse courriel</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="lang-section lang-en active">Phone Number (Optional)</label>
+                        <label class="lang-section lang-fr">Numéro de téléphone (Optionnel)</label>
+                        <input type="tel">
+                    </div>
+                    <div class="form-group">
+                        <label class="lang-section lang-en active">Your Message</label>
+                        <label class="lang-section lang-fr">Votre message</label>
+                        <textarea required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn lang-section lang-en active">Send Message</button>
+                    <button type="submit" class="submit-btn lang-section lang-fr">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- English Version -->
+            <div class="footer-about lang-section lang-en active">
+                <h3>SFT</h3>
+                <p>Solutions Frenchteau Tech provides professional computer-related services to businesses across
+                    Québec. We're committed to delivering reliable, secure, and innovative IT solutions.</p>
+            </div>
+
+            <!-- French Version -->
+            <div class="footer-about lang-section lang-fr">
+                <h3>SFT</h3>
+                <p>Solutions Frenchteau Tech fournit des services informatiques professionnels aux entreprises du
+                    Québec. Nous nous engageons à fournir des solutions informatiques fiables, sécurisées et innovantes.
+                </p>
+            </div>
+
+            <!-- Quick Links - English -->
+            <div class="footer-section lang-section lang-en active">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links - French -->
+            <div class="footer-section lang-section lang-fr">
+                <h4>Liens rapides</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services - English -->
+            <div class="footer-section lang-section lang-en active">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">System Management</a></li>
+                    <li><a href="#services">Data Solutions</a></li>
+                    <li><a href="#services">Payment Systems</a></li>
+                    <li><a href="#services">IT Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Services - French -->
+            <div class="footer-section lang-section lang-fr">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Gestion des systèmes</a></li>
+                    <li><a href="#services">Solutions de données</a></li>
+                    <li><a href="#services">Systèmes de paiement</a></li>
+                    <li><a href="#services">Conseil informatique</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info - English -->
+            <div class="footer-section lang-section lang-en active">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>510 rue Main</li>
+                    <li>Hudson, QC J0P 1H0</li>
+                    <li>info@frenchteautech.com</li>
+                    <li>Mon-Fri: 9 AM - 6 PM</li>
+                </ul>
+            </div>
+
+            <!-- Contact Info - French -->
+            <div class="footer-section lang-section lang-fr">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>510 rue Main</li>
+                    <li>Hudson, QC J0P 1H0</li>
+                    <li>info@frenchteautech.com</li>
+                    <li>Lun-Ven: 9h - 18h</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="lang-section lang-en active">© 2026 Solutions Frenchteau Tech. All rights reserved.
+                Computer-Related Services • Québec, Canada</p>
+            <p class="lang-section lang-fr">© 2026 Solutions Frenchteau Tech. Tous droits réservés. Services
+                informatiques • Québec, Canada</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
