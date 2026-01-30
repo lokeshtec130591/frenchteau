@@ -72,15 +72,15 @@
   },
   "PROCESS": {
     "TITLE": "Comment nous travaillons",
-    "SUBTITLE": "Notre processus simple et efficace pour vous aider à démarrer",
-    "CONSULTATION": "Consultation",
-    "CONSULTATIONDESC": "Nous discutons de vos besoins, défis et objectifs pour comprendre votre entreprise.",
-    "STRATEGY": "Stratégie",
-    "STRATEGYDESC": "Nous développons un plan personnalisé adapté à vos exigences spécifiques.",
-    "IMPLEMENTATION": "Mise en œuvre",
-    "IMPLEMENTATIONDESC": "Nos experts exécutent la solution avec une perturbation minimale de vos opérations.",
-    "SUPPORT": "Support",
-    "SUPPORTDESC": "Nous fournissons une maintenance et un support continus pour assurer un succès durable."
+    "SUBTITLE": "Notre processus simple et efficace pour vous aider",
+    "CONSULTATION": "Comprendre vos besoins",
+    "CONSULTATIONDESC": "Nous prenons le temps de comprendre vos besoins métier et vos défis techniques.",
+    "STRATEGY": "Planifier la bonne solution",
+    "STRATEGYDESC": "Nous recommandons des solutions pratiques et rentables adaptées à vos besoins.",
+    "IMPLEMENTATION": "Implémenter et réparer",
+    "IMPLEMENTATIONDESC": "Nous installons, configurons ou réparons les systèmes efficacement avec une perturbation minimale.",
+    "SUPPORT": "Support continu",
+    "SUPPORTDESC": "Nous fournissons un support et une maintenance continus pour que vos systèmes fonctionnent correctement."
   },
   "TESTIMONIALS": {
     "TITLE": "Ce que disent nos clients",

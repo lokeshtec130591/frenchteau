@@ -73,14 +73,14 @@
   "PROCESS": {
     "TITLE": "How We Work",
     "SUBTITLE": "Our simple, effective process to get you started",
-    "CONSULTATION": "Consultation",
-    "CONSULTATIONDESC": "We discuss your needs, challenges, and goals to understand your business.",
-    "STRATEGY": "Strategy",
-    "STRATEGYDESC": "We develop a customized plan tailored to your specific requirements.",
-    "IMPLEMENTATION": "Implementation",
-    "IMPLEMENTATIONDESC": "Our experts execute the solution with minimal disruption to your operations.",
-    "SUPPORT": "Support",
-    "SUPPORTDESC": "We provide ongoing maintenance and support to ensure continued success."
+    "CONSULTATION": "Understand Your Needs",
+    "CONSULTATIONDESC": "We take time to understand your business requirements and technical challenges.",
+    "STRATEGY": "Plan the Right Solution",
+    "STRATEGYDESC": "We recommend practical and cost-effective solutions tailored to your needs.",
+    "IMPLEMENTATION": "Implement &amp; Repair",
+    "IMPLEMENTATIONDESC": "We install, configure, or repair systems efficiently with minimal disruption.",
+    "SUPPORT": "Ongoing Support",
+    "SUPPORTDESC": "We provide continued support and maintenance to keep your systems running smoothly."
   },
   "TESTIMONIALS": {
     "TITLE": "What Our Clients Say",
