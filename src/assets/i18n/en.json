@@ -1,0 +1,126 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SERVICES": "Services",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "TITLE1": "Modern",
+    "TITLE2": "IT",
+    "TITLE3": "Solutions",
+    "TITLE4": "for Your Business",
+    "DESCRIPTION": "Professional computer services designed for reliability, security, and growth. Serving businesses across Québec with expertise you can trust.",
+    "BUTTONSERVICES": "View Services",
+    "BUTTONSTART": "Get Started"
+  },
+  "FEATURES": {
+    "SUPPORT": "Fast Support",
+    "SECURE": "Secure",
+    "AVAILABLE": "Available",
+    "RELIABLE": "Reliable"
+  },
+  "STATS": {
+    "EXPERIENCE": "Years Experience",
+    "PROJECTS": "Projects Completed",
+    "SATISFACTION": "Client Satisfaction",
+    "SUPPORTAVAILABLE": "Support Available"
+  },
+  "ABOUT": {
+    "TITLE": "About",
+    "COMPANY": "Solutions Frenchteau Tech",
+    "DESCRIPTION1": "is a trusted individual enterprise based in Hudson, Québec. We specialize in delivering comprehensive computer-related services that empower businesses to operate efficiently and securely.",
+    "DESCRIPTION2": "With over a decade of experience, we understand the unique challenges faced by Québec businesses. Our mission is simple: provide reliable, professional IT solutions that let you focus on what you do best.",
+    "CERTIFIED": "Certified Professionals",
+    "CERTIFIEDDESC": "Our team holds industry-recognized certifications and stays current with technology trends.",
+    "EXPERTISE": "Local Expertise",
+    "EXPERTISEDESC": "Based in Québec, we understand local business needs and regulatory requirements.",
+    "TRACK": "Proven Track Record",
+    "TRACKDESC": "Hundreds of successful projects and satisfied clients across various industries."
+  },
+  "SERVICES": {
+    "TITLE": "Our Services",
+    "SUBTITLE": "Complete IT solutions tailored to your business needs",
+    "SYSTEMMANAGEMENT": "System Management",
+    "SYSTEMMANAGEMENTDESC": "Complete infrastructure management with 24/7 monitoring, automated maintenance, and proactive system optimization to ensure maximum uptime.",
+    "DATASOLUTIONS": "Data Solutions",
+    "DATASOLUTIONSDESC": "Secure data processing, backup solutions, cloud storage integration, and intelligent management systems to protect your valuable business data.",
+    "PAYMENTSYSTEMS": "Payment Systems",
+    "PAYMENTSYSTEMSDESC": "Secure debit & credit system integration, PCI compliance solutions, and reliable transaction processing for safe payment operations.",
+    "TECHNICALSUPPORT": "Technical Support",
+    "TECHNICALSUPPORTDESC": "Expert hardware repair, system troubleshooting, and rapid-response technical assistance available when your business needs it most.",
+    "ITCONSULTING": "IT Consulting",
+    "ITCONSULTINGDESC": "Strategic technology planning, architecture design, security assessments, and digital transformation guidance for long-term success.",
+    "CONTRACTSERVICES": "Contract Services",
+    "CONTRACTSERVICESDESC": "Flexible computer-related contract services customized to your unique business requirements and operational schedule."
+  },
+  "BENEFITS": {
+    "TITLE": "Why Choose Us",
+    "SUBTITLE": "The advantages of partnering with Solutions Frenchteau Tech",
+    "TAILORED": "Tailored Solutions",
+    "TAILOREDDESC": "We don't believe in one-size-fits-all. Every solution is customized to match your specific business needs, goals, and budget.",
+    "RAPID": "Rapid Response",
+    "RAPIDDESC": "Technical issues can't wait. Our team provides fast, efficient support to minimize downtime and keep your business running smoothly.",
+    "SECURITY": "Security First",
+    "SECURITYDESC": "We prioritize data security and compliance, implementing industry-best practices to protect your business from cyber threats.",
+    "COST": "Cost-Effective",
+    "COSTDESC": "Get enterprise-level IT services without enterprise prices. We deliver maximum value while respecting your budget constraints.",
+    "SCALABLE": "Scalable Growth",
+    "SCALABLEDESC": "Our solutions grow with your business. We design systems that can scale seamlessly as your needs evolve.",
+    "PARTNERSHIP": "Long-Term Partnership",
+    "PARTNERSHIPDESC": "We're not just vendors—we're partners invested in your success. We build lasting relationships based on trust and results."
+  },
+  "PROCESS": {
+    "TITLE": "How We Work",
+    "SUBTITLE": "Our simple, effective process to get you started",
+    "CONSULTATION": "Consultation",
+    "CONSULTATIONDESC": "We discuss your needs, challenges, and goals to understand your business.",
+    "STRATEGY": "Strategy",
+    "STRATEGYDESC": "We develop a customized plan tailored to your specific requirements.",
+    "IMPLEMENTATION": "Implementation",
+    "IMPLEMENTATIONDESC": "Our experts execute the solution with minimal disruption to your operations.",
+    "SUPPORT": "Support",
+    "SUPPORTDESC": "We provide ongoing maintenance and support to ensure continued success."
+  },
+  "TESTIMONIALS": {
+    "TITLE": "What Our Clients Say",
+    "SUBTITLE": "Real feedback from businesses we've helped",
+    "CLIENT1": "\"SFT transformed our IT infrastructure completely. Their team is professional, responsive, and truly understands business needs. Highly recommended!\"",
+    "CLIENT1ROLE": "CEO, Local Retail Chain",
+    "CLIENT2": "\"Outstanding service! They implemented our payment system flawlessly and provided excellent training. Our operations have never been smoother.\"",
+    "CLIENT2ROLE": "Owner, Boutique Shop",
+    "CLIENT3": "\"The best IT partner we've ever had. Fast response times, expert knowledge, and they actually care about our success. Worth every penny!\"",
+    "CLIENT3ROLE": "Manager, Manufacturing Company"
+  },
+  "CTA": {
+    "TITLE": "Ready to Transform Your IT?",
+    "DESCRIPTION": "Let's discuss how we can help your business thrive with modern technology solutions.",
+    "BUTTON": "Get Started Today"
+  },
+  "CONTACT": {
+    "TITLE": "Get In Touch",
+    "DESCRIPTION": "Have questions or ready to start a project? We're here to help. Reach out to us through any of the channels below or fill out the contact form.",
+    "LOCATION": "Our Location",
+    "EMAIL": "Email Us",
+    "HOURS": "Business Hours",
+    "HOURSTEXT": "Monday – Friday, 9:00 AM – 6:00 PM EST",
+    "NAMELABEL": "Your Name",
+    "EMAILLABEL": "Email Address",
+    "PHONELABEL": "Phone Number (Optional)",
+    "MESSAGELABEL": "Your Message",
+    "SUBMITBUTTON": "Send Message"
+  },
+  "FOOTER": {
+    "ABOUTTEXT": "Solutions Frenchteau Tech provides professional computer-related services to businesses across Québec. We're committed to delivering reliable, secure, and innovative IT solutions.",
+    "QUICKLINKS": "Quick Links",
+    "HOME": "Home",
+    "ABOUT": "About Us",
+    "SERVICES": "Services",
+    "CONTACT": "Contact",
+    "SERVICESTITLE": "Services",
+    "CONTACTTITLE": "Contact",
+    "BUSINESSHOURS": "Mon-Fri: 9 AM - 6 PM",
+    "COPYRIGHT": "© 2026 Solutions Frenchteau Tech. All rights reserved. Computer-Related Services • Québec, Canada"
+  }
+}
+
