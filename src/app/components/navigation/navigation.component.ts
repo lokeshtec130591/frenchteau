@@ -10,14 +10,14 @@ import { Subject, takeUntil } from 'rxjs';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   template: `
-    <nav id="navbar" [class.scrolled]="isScrolled()">
+    <nav [class.scrolled]="isScrolled()" class="navbar">
       <div class="nav-container">
         <div class="logo">Frenchteau Tech Solutions</div>
         <ul class="nav-links">
-          <li><a href="#home">{{ 'NAV.HOME' | translate }}</a></li>
-          <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
-          <li><a href="#services">{{ 'NAV.SERVICES' | translate }}</a></li>
-          <li><a href="#contact">{{ 'NAV.CONTACT' | translate }}</a></li>
+          <li><a href="#home" (click)="smoothScroll($event, 'home')">{{ 'NAV.HOME' | translate }}</a></li>
+          <li><a href="#about" (click)="smoothScroll($event, 'about')">{{ 'NAV.ABOUT' | translate }}</a></li>
+          <li><a href="#services" (click)="smoothScroll($event, 'services')">{{ 'NAV.SERVICES' | translate }}</a></li>
+          <li><a href="#contact" (click)="smoothScroll($event, 'contact')">{{ 'NAV.CONTACT' | translate }}</a></li>
         </ul>
         <div class="nav-buttons">
           <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
@@ -28,7 +28,22 @@ import { Subject, takeUntil } from 'rxjs';
       </div>
     </nav>
   `,
-  styles: []
+  styles: [`
+    .navbar {
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+    }
+
+    [data-theme="dark"] .navbar.scrolled {
+      background: rgba(20, 20, 20, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+  `]
 })
 export class NavigationComponent implements OnInit, OnDestroy {
   isScrolled = signal(false);
@@ -60,7 +75,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    this.isScrolled.set(window.pageYOffset > 100);
+    const scrollPosition = window.pageYOffset;
+    this.isScrolled.set(scrollPosition > 100);
   }
 
   toggleTheme(): void {
@@ -70,5 +86,17 @@ export class NavigationComponent implements OnInit, OnDestroy {
   toggleLanguage(): void {
     this.languageService.toggleLanguage();
     this.translateService.use(this.languageService.getCurrentLanguage());
+  }
+
+  smoothScroll(event: Event, sectionId: string): void {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   }
 }

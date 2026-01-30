@@ -1,4 +1,4 @@
- * {
+* {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
@@ -86,12 +86,16 @@
  }
 
  @keyframes float {
-     0%, 100% {
+
+     0%,
+     100% {
          transform: translate(0, 0) rotate(0deg);
      }
+
      33% {
          transform: translate(30px, -30px) rotate(120deg);
      }
+
      66% {
          transform: translate(-20px, 20px) rotate(240deg);
      }
@@ -133,9 +137,12 @@
  }
 
  @keyframes pulse {
-     0%, 100% {
+
+     0%,
+     100% {
          opacity: 1;
      }
+
      50% {
          opacity: 0.8;
      }
@@ -276,9 +283,12 @@
  }
 
  @keyframes gradientShift {
-     0%, 100% {
+
+     0%,
+     100% {
          filter: hue-rotate(0deg);
      }
+
      50% {
          filter: hue-rotate(20deg);
      }
@@ -412,74 +422,19 @@
          transform: translateY(0) scale(1);
          opacity: 0;
      }
+
      10% {
          opacity: 0.6;
      }
+
      90% {
          opacity: 0.6;
      }
+
      100% {
          transform: translateY(-600px) scale(0.5);
          opacity: 0;
      }
- }
-
- /* Circular Icons */
- .circular-icons {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     left: 0;
-     pointer-events: none;
- }
-
- .icon-circle {
-     position: absolute;
-     width: 60px;
-     height: 60px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     animation: rotateAround 20s linear infinite;
- }
-
- .icon-wrapper {
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     font-size: 24px;
-     background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
-     border: 2px solid rgba(99, 102, 241, 0.5);
-     box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-     transition: all 0.3s ease;
- }
-
- .icon-circle:nth-child(1) { --index: 0; animation-delay: 0s; }
- .icon-circle:nth-child(2) { --index: 1; animation-delay: -2.5s; }
- .icon-circle:nth-child(3) { --index: 2; animation-delay: -5s; }
- .icon-circle:nth-child(4) { --index: 3; animation-delay: -7.5s; }
- .icon-circle:nth-child(5) { --index: 4; animation-delay: -10s; }
- .icon-circle:nth-child(6) { --index: 5; animation-delay: -12.5s; }
- .icon-circle:nth-child(7) { --index: 6; animation-delay: -15s; }
- .icon-circle:nth-child(8) { --index: 7; animation-delay: -17.5s; }
-
- @keyframes rotateAround {
-     0% {
-         transform: rotate(calc((var(--index) / var(--total)) * 360deg)) translateX(180px) rotate(calc(-(var(--index) / var(--total)) * 360deg));
-     }
-     100% {
-         transform: rotate(calc(360deg + (var(--index) / var(--total)) * 360deg)) translateX(180px) rotate(calc(-(360deg + (var(--index) / var(--total)) * 360deg)));
-     }
- }
-
- .icon-wrapper:hover {
-     background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(168, 85, 247, 0.4));
-     box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
-     transform: scale(1.1);
  }
 
  /* Feature Banner */
@@ -527,9 +482,12 @@
  }
 
  @keyframes bounce {
-     0%, 100% {
+
+     0%,
+     100% {
          transform: translateY(0);
      }
+
      50% {
          transform: translateY(-10px);
      }
@@ -546,6 +504,7 @@
          opacity: 0;
          transform: translateY(30px);
      }
+
      to {
          opacity: 1;
          transform: translateY(0);
@@ -557,6 +516,7 @@
          opacity: 0;
          transform: translateX(-50px);
      }
+
      to {
          opacity: 1;
          transform: translateX(0);
@@ -568,6 +528,7 @@
          opacity: 0;
          transform: translateX(50px);
      }
+
      to {
          opacity: 1;
          transform: translateX(0);
@@ -697,6 +658,7 @@
      from {
          transform: rotate(0deg);
      }
+
      to {
          transform: rotate(360deg);
      }
@@ -743,6 +705,7 @@
      0% {
          transform: translateX(-100%) translateY(-100%) rotate(45deg);
      }
+
      100% {
          transform: translateX(100%) translateY(100%) rotate(45deg);
      }
@@ -1103,6 +1066,7 @@
      0% {
          transform: translate(0, 0);
      }
+
      100% {
          transform: translate(50px, 50px);
      }
@@ -1361,6 +1325,15 @@
      color: var(--text-secondary);
      font-size: 0.9rem;
      transition: color 0.3s ease;
+ }
+
+ /* Language Toggle */
+ .lang-section {
+     display: none;
+ }
+
+ .lang-section.active {
+     display: block;
  }
 
  /* Responsive */

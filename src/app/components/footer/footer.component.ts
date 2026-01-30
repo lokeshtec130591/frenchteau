@@ -19,7 +19,7 @@ import { FooterLink, FooterSection } from '../../models';
           <h4>{{ section.titleKey | translate }}</h4>
           <ul class="footer-links">
             <li *ngFor="let link of section.links">
-              <a [href]="link.url">{{ link.isTranslated ? (link.label | translate) : link.label }}</a>
+              <a [href]="link.url" (click)="handleLinkClick($event, link.url)">{{ link.isTranslated ? (link.label | translate) : link.label }}</a>
             </li>
           </ul>
         </div>
@@ -62,4 +62,23 @@ export class FooterComponent {
       ]
     }
   ];
+
+  handleLinkClick(event: Event, url: string): void {
+    if (url.startsWith('#')) {
+      event.preventDefault();
+      const sectionId = url.substring(1);
+      this.smoothScroll(sectionId);
+    }
+  }
+
+  private smoothScroll(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 }
