@@ -12,7 +12,9 @@ import { Subject, takeUntil } from 'rxjs';
   template: `
     <nav [class.scrolled]="isScrolled()" class="navbar">
       <div class="nav-container">
-        <div class="logo">Frenchteau Tech Solutions</div>
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Frenchteau Tech Solutions" class="logo-img">
+        </div>
         <ul class="nav-links">
           <li><a href="#home" (click)="smoothScroll($event, 'home')">{{ 'NAV.HOME' | translate }}</a></li>
           <li><a href="#about" (click)="smoothScroll($event, 'about')">{{ 'NAV.ABOUT' | translate }}</a></li>
@@ -29,6 +31,12 @@ import { Subject, takeUntil } from 'rxjs';
     </nav>
   `,
   styles: [`
+    .logo-img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+    }
+
     .navbar {
       transition: all 0.3s ease;
     }
