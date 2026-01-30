@@ -28,5 +28,5 @@ import { LanguageService } from '../../services/language.service';
   styles: []
 })
 export class BackgroundComponent {
-  constructor(public languageService: LanguageService) {}
+  constructor(public languageService: LanguageService) { }
 }

@@ -5,10 +5,10 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
 import { FeatureBannerItem } from '../../models';
 
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [CommonModule, TranslateModule, ScrollRevealDirective],
-  template: `
+    selector: 'app-hero',
+    standalone: true,
+    imports: [CommonModule, TranslateModule, ScrollRevealDirective],
+    template: `
     <section class="hero-banner" id="home" appScrollReveal>
       <div class="hero-content">
         <div class="hero-text">
@@ -231,26 +231,26 @@ import { FeatureBannerItem } from '../../models';
       </div>
     </section>
   `,
-  styles: []
+    styles: []
 })
 export class HeroComponent implements OnInit {
-  featureItems: FeatureBannerItem[] = [
-    { icon: '⚡', labelKey: 'FEATURES.SUPPORT' },
-    { icon: '🔒', labelKey: 'FEATURES.SECURE' },
-    { icon: '24/7', labelKey: 'FEATURES.AVAILABLE' },
-    { icon: '✓', labelKey: 'FEATURES.RELIABLE' }
-  ];
+    featureItems: FeatureBannerItem[] = [
+        { icon: '⚡', labelKey: 'FEATURES.SUPPORT' },
+        { icon: '🔒', labelKey: 'FEATURES.SECURE' },
+        { icon: '24/7', labelKey: 'FEATURES.AVAILABLE' },
+        { icon: '✓', labelKey: 'FEATURES.RELIABLE' }
+    ];
 
-  circularIcons = ['🏢', '🔒', '⚙️', '⚡', '💰', '📊', '🎯', '🤝'];
+    circularIcons = ['🏢', '🔒', '⚙️', '⚡', '💰', '📊', '🎯', '🤝'];
 
-  constructor(private translateService: TranslateService) { }
+    constructor(private translateService: TranslateService) { }
 
-  ngOnInit(): void {
-    this.initializeLanguage();
-  }
+    ngOnInit(): void {
+        this.initializeLanguage();
+    }
 
-  private initializeLanguage(): void {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-    this.translateService.use(savedLang);
-  }
+    private initializeLanguage(): void {
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        this.translateService.use(savedLang);
+    }
 }

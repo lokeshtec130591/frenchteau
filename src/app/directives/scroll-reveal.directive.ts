@@ -7,7 +7,7 @@ import { Directive, ElementRef, OnInit, OnDestroy } from '@angular/core';
 export class ScrollRevealDirective implements OnInit, OnDestroy {
   private observer?: IntersectionObserver;
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef) { }
 
   ngOnInit(): void {
     const options = {

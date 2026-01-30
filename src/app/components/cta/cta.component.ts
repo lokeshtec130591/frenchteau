@@ -16,4 +16,4 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
   `,
   styles: []
 })
-export class CtaComponent {}
+export class CtaComponent { }

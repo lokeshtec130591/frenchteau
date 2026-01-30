@@ -54,7 +54,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     public languageService: LanguageService,
     public translateService: TranslateService,
     public themeService: ThemeService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.initializeTheme();

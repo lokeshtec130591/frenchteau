@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
   constructor(
     public languageService: LanguageService,
     public themeService: ThemeService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     // Initialize theme and language from storage

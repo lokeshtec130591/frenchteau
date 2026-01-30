@@ -8,10 +8,10 @@ import emailjs from '@emailjs/browser';
 import { environment } from '../../../environments/environment';
 
 @Component({
-    selector: 'app-contact',
-    standalone: true,
-    imports: [CommonModule, TranslateModule, FormsModule, ScrollRevealDirective],
-    template: `
+  selector: 'app-contact',
+  standalone: true,
+  imports: [CommonModule, TranslateModule, FormsModule, ScrollRevealDirective],
+  template: `
     <section class="contact scroll-reveal" id="contact" appScrollReveal>
       <div class="contact-container">
         <div class="contact-left">
@@ -73,7 +73,7 @@ import { environment } from '../../../environments/environment';
       </div>
     </section>
   `,
-    styles: [`
+  styles: [`
       .required {
         color: red;
       }
@@ -86,87 +86,87 @@ import { environment } from '../../../environments/environment';
     `]
 })
 export class ContactComponent implements OnInit {
-    @ViewChild('contactForm') form!: NgForm;
+  @ViewChild('contactForm') form!: NgForm;
 
-    formData: FormData = {
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
+  formData: FormData = {
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
+
+  isSubmitting = false;
+  successMessage = '';
+  errorMessage = '';
+
+  contactInfo: ContactInfo[] = [
+    {
+      icon: '📍',
+      labelKey: 'CONTACT.LOCATION',
+      content: '510 rue Main<br>Hudson, Québec J0P 1H0<br>Canada'
+    },
+    {
+      icon: '📧',
+      labelKey: 'CONTACT.EMAIL',
+      content: 'info&#64;frenchteautech.com<br>support&#64;frenchteautech.com'
+    },
+    {
+      icon: '🕒',
+      labelKey: 'CONTACT.HOURS',
+      contentKey: 'CONTACT.HOURSTEXT'
+    }
+  ];
+
+  constructor(private translateService: TranslateService) { }
+
+  ngOnInit(): void {
+    emailjs.init(environment.emailjs.publicKey);
+  }
+
+  onSubmit(form: NgForm): void {
+    if (!form.valid || this.isSubmitting) {
+      return;
+    }
+
+    this.isSubmitting = true;
+    this.successMessage = '';
+    this.errorMessage = '';
+
+    const now = new Date();
+    const templateParams = {
+      to_email: environment.contact.toEmail,
+      from_name: this.formData.name,
+      from_email: this.formData.email,
+      phone: this.formData.phone,
+      message: this.formData.message,
+      submitted_date: now.toLocaleDateString(),
+      submitted_time: now.toLocaleTimeString(),
+      domain_name: environment.contact.fromDomain
     };
 
-    isSubmitting = false;
-    successMessage = '';
-    errorMessage = '';
+    console.log('Sending email with params:', templateParams);
 
-    contactInfo: ContactInfo[] = [
-        {
-            icon: '📍',
-            labelKey: 'CONTACT.LOCATION',
-            content: '510 rue Main<br>Hudson, Québec J0P 1H0<br>Canada'
-        },
-        {
-            icon: '📧',
-            labelKey: 'CONTACT.EMAIL',
-            content: 'info&#64;frenchteautech.com<br>support&#64;frenchteautech.com'
-        },
-        {
-            icon: '🕒',
-            labelKey: 'CONTACT.HOURS',
-            contentKey: 'CONTACT.HOURSTEXT'
-        }
-    ];
+    emailjs.send(environment.emailjs.serviceId, environment.emailjs.templateId, templateParams)
+      .then(() => {
+        console.log('Email sent successfully');
+        this.translateService.get('CONTACT.SUCCESS').subscribe(translated => {
+          this.successMessage = translated;
+        });
+        this.resetForm();
+        this.isSubmitting = false;
+        form.resetForm();
+      })
+      .catch((error) => {
+        console.error('Email send error:', error);
+        this.translateService.get('CONTACT.ERROR').subscribe(translated => {
+          this.errorMessage = translated;
+        });
+        this.isSubmitting = false;
+      });
+  }
 
-    constructor(private translateService: TranslateService) {}
-
-    ngOnInit(): void {
-        emailjs.init(environment.emailjs.publicKey);
-    }
-
-    onSubmit(form: NgForm): void {
-        if (!form.valid || this.isSubmitting) {
-            return;
-        }
-
-        this.isSubmitting = true;
-        this.successMessage = '';
-        this.errorMessage = '';
-
-        const now = new Date();
-        const templateParams = {
-            to_email: environment.contact.toEmail,
-            from_name: this.formData.name,
-            from_email: this.formData.email,
-            phone: this.formData.phone,
-            message: this.formData.message,
-            submitted_date: now.toLocaleDateString(),
-            submitted_time: now.toLocaleTimeString(),
-            domain_name: environment.contact.fromDomain
-        };
-
-        console.log('Sending email with params:', templateParams);
-
-        emailjs.send(environment.emailjs.serviceId, environment.emailjs.templateId, templateParams)
-            .then(() => {
-                console.log('Email sent successfully');
-                this.translateService.get('CONTACT.SUCCESS').subscribe(translated => {
-                    this.successMessage = translated;
-                });
-                this.resetForm();
-                this.isSubmitting = false;
-                form.resetForm();
-            })
-            .catch((error) => {
-                console.error('Email send error:', error);
-                this.translateService.get('CONTACT.ERROR').subscribe(translated => {
-                    this.errorMessage = translated;
-                });
-                this.isSubmitting = false;
-            });
-    }
-
-    private resetForm(): void {
-        this.formData = { name: '', email: '', phone: '', message: '' };
-        setTimeout(() => { this.successMessage = ''; }, 3000);
-    }
+  private resetForm(): void {
+    this.formData = { name: '', email: '', phone: '', message: '' };
+    setTimeout(() => { this.successMessage = ''; }, 3000);
+  }
 }
