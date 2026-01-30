@@ -51,7 +51,8 @@ export interface StatItem {
 export interface ContactInfo {
   icon: string;
   labelKey: string;
-  content: string;
+  content?: string;
+  contentKey?: string;
 }
 
 export interface FormData {
