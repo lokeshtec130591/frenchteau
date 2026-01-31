@@ -1,12 +1,12 @@
 export const environment = {
     production: true,
     emailjs: {
-        publicKey: '4jKNtGILZXQt0BkHD',
-        serviceId: 'service_0x9ejl8',
-        templateId: 'template_h6jp37a'
+        publicKey: 'hnhx9SZR3I0zg1_c7',
+        serviceId: 'service_yhbsr5h',
+        templateId: 'template_empeiz3'
     },
     contact: {
-        toEmail: 'info@frenchteautech.com',
+        toEmail: 'frenchteautechs@gmail.com',
         fromDomain: 'frenchteautech.com',
         mailSubject: 'New Contact Form Submission'
     }
