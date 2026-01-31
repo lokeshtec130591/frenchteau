@@ -1,0 +1,138 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SERVICES": "Services",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "TITLE1": "Modern",
+    "TITLE2": "IT",
+    "TITLE3": "Solutions",
+    "TITLE4": "for Your Business",
+    "DESCRIPTION": "Professional computer services designed for reliability, security, and growth. Serving businesses across Québec with expertise you can trust.",
+    "BUTTONSERVICES": "View Services",
+    "BUTTONSTART": "Get Started"
+  },
+  "FEATURES": {
+    "SUPPORT": "Fast Support",
+    "SECURE": "Secure",
+    "AVAILABLE": "Available",
+    "RELIABLE": "Reliable"
+  },
+  "STATS": {
+    "EXPERIENCE": "Years Experience",
+    "PROJECTS": "Projects Completed",
+    "SATISFACTION": "Client Satisfaction",
+    "SUPPORTAVAILABLE": "Support Available"
+  },
+  "ABOUT": {
+    "TITLE": "ABOUT US",
+    "COMPANY": "Frenchteau Tech Solutions",
+    "DESCRIPTION1": "is a trusted IT service provider based in Hudson, Québec. We specialize in computer-related services that support businesses with their daily technology needs.",
+    "DESCRIPTION2": "Our services include system management, system installation, computer and hardware repairs, data management and protection, data recovery, and debit & credit machine maintenance and repair services.",
+    "DESCRIPTION3": "We are committed to delivering reliable, professional, and cost-effective solutions. Our goal is to help businesses operate efficiently, securely, and with confidence in their technology.",
+    "CERTIFIED": "Certified Professionals",
+    "CERTIFIEDDESC": "Our team holds industry-recognized certifications and stays current with technology trends.",
+    "EXPERTISE": "Local Expertise",
+    "EXPERTISEDESC": "Based in Québec, we understand local business needs and regulatory requirements.",
+    "TRACK": "Proven Track Record",
+    "TRACKDESC": "Hundreds of successful projects and satisfied clients across various industries."
+  },
+  "SERVICES": {
+    "TITLE": "Our Services",
+    "SUBTITLE": "Our IT & Computer Services",
+    "SYSTEMMANAGEMENT": "System Management & Support",
+    "SYSTEMMANAGEMENTDESC": "We provide ongoing system monitoring, maintenance, and support to ensure your computers and IT infrastructure perform reliably.",
+    "DATASOLUTIONS": "System Installation & Setup",
+    "DATASOLUTIONSDESC": "Professional installation and configuration of computers, operating systems, software, and network components tailored to your business requirements.",
+    "PAYMENTSYSTEMS": "Computer & Hardware Repair",
+    "PAYMENTSYSTEMSDESC": "Repair services for desktops, laptops, and monitors, including broken screens, hardware faults, and component issues.",
+    "TECHNICALSUPPORT": "Data Management & Protection",
+    "TECHNICALSUPPORTDESC": "Secure handling, organization, and protection of business data to prevent loss and ensure confidentiality.",
+    "ITCONSULTING": "Data Recovery Services",
+    "ITCONSULTINGDESC": "Recovery of lost, deleted, or corrupted data from computers and storage devices.",
+    "CONTRACTSERVICES": "Debit & Credit Machine Services",
+    "CONTRACTSERVICESDESC": "Installation, maintenance, and repair of debit and credit machines to ensure smooth and uninterrupted payment processing."
+  },
+  "BENEFITS": {
+    "TITLE": "Why Choose Us",
+    "SUBTITLE": "Improve clarity and emphasize benefits",
+    "TAILORED": "Tailored Solutions",
+    "TAILOREDDESC": "We customize every solution to meet your specific business needs and budget.",
+    "RAPID": "Fast Response",
+    "RAPIDDESC": "Quick, dependable technical assistance whenever you need it.",
+    "SECURITY": "Security Focused",
+    "SECURITYDESC": "We prioritize data protection and follow best practices to keep your systems safe.",
+    "COST": "Affordable Services",
+    "COSTDESC": "High-quality IT support without the high price tag.",
+    "SCALABLE": "Scalable Services",
+    "SCALABLEDESC": "Our solutions grow with your business as your needs evolve.",
+    "PARTNERSHIP": "Trusted Partnership",
+    "PARTNERSHIPDESC": "We aim to build long-lasting relationships with our clients based on trust and results."
+  },
+  "PROCESS": {
+    "TITLE": "How We Work",
+    "SUBTITLE": "Our simple, effective process to get you started",
+    "CONSULTATION": "Understand Your Needs",
+    "CONSULTATIONDESC": "We take time to understand your business requirements and technical challenges.",
+    "STRATEGY": "Plan the Right Solution",
+    "STRATEGYDESC": "We recommend practical and cost-effective solutions tailored to your needs.",
+    "IMPLEMENTATION": "Implement & Repair",
+    "IMPLEMENTATIONDESC": "We install, configure, or repair systems efficiently with minimal disruption.",
+    "SUPPORT": "Ongoing Support",
+    "SUPPORTDESC": "We provide continued support and maintenance to keep your systems running smoothly."
+  },
+  "TESTIMONIALS": {
+    "TITLE": "What Our Clients Say",
+    "SUBTITLE": "Real feedback from businesses we've helped",
+    "CLIENT1": "Frenchteau Tech Solutions provided excellent computer repair and system setup for our office. Professional, responsive, and very knowledgeable. Highly recommended!",
+    "CLIENT1ROLE": "CEO, Local Retail Chain",
+    "CLIENT2": "Great service and fast support. They fixed our system issues and helped secure our data. Very reliable and easy to work with.",
+    "CLIENT2ROLE": "Owner, Boutique Shop",
+    "CLIENT3": "Excellent experience overall. Clear communication, quick service, and dependable IT support. We trust them with our systems.",
+    "CLIENT3ROLE": "Manager, Manufacturing Company"
+  },
+  "CTA": {
+    "TITLE": "Ready to Improve Your IT Systems?",
+    "DESCRIPTION": "Let Frenchteau Tech Solutions take care of your technology needs so you can focus on your business. Whether you need system installation, repairs, data protection, or payment machine support, we are here to",
+    "BUTTON": "Contact Us"
+  },
+  "CONTACT": {
+    "TITLE": "Get In Touch",
+    "DESCRIPTION": "Have a question? We'd love to hear from you.",
+    "NAMELABEL": "Name",
+    "NAMEERROR": "Name is required",
+    "NAMEWHITESPACEERROR": "Name cannot be only spaces",
+    "EMAILLABEL": "Email",
+    "EMAILERROR": "Please enter a valid email address",
+    "EMAILWHITESPACEERROR": "Email cannot be only spaces",
+    "PHONELABEL": "Phone",
+    "PHONEERROR": "Phone number is required",
+    "PHONEINVALIDERROR": "Phone must be 10 digits (e.g., (416) 555-1234)",
+    "MESSAGELABEL": "Message",
+    "MESSAGEERROR": "Message is required",
+    "MESSAGEWHITESPACEERROR": "Message cannot be only spaces",
+    "LOCATION": "Location",
+    "EMAIL": "Email",
+    "HOURS": "Business Hours",
+    "HOURSTEXT": "Monday - Friday: 9:00 AM - 5:00 PM EST",
+    "SUBMITBUTTON": "Send Message",
+    "SENDING": "Sending...",
+    "SUCCESS": "Message sent successfully!",
+    "ERROR": "Failed to send message. Please try again."
+  },
+  "FOOTER": {
+    "COMPANY": "Frenchteau Tech Solutions",
+    "ABOUTTEXT": "Frenchteau Tech Solutions is a trusted IT service provider based in Hudson, Québec. We specialize in computer-related services that support businesses with their daily technology needs.",
+    "QUICKLINKS": "Quick Links",
+    "HOME": "Home",
+    "ABOUT": "About Us",
+    "SERVICES": "Services",
+    "CONTACT": "Contact",
+    "SERVICESTITLE": "Services",
+    "CONTACTTITLE": "Contact",
+    "BUSINESSHOURS": "Mon-Fri: 9 AM - 6 PM",
+    "COPYRIGHT": "© 2026 Solutions Frenchteau Tech. All rights reserved. Computer-Related Services • Québec, Canada"
+  }
+}
