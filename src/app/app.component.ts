@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { LanguageService } from './services/language.service';
 import { ThemeService } from './services/theme.service';
+import { SeoService } from './services/seo.service';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { StatsComponent } from './components/stats/stats.component';
@@ -57,7 +58,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     public languageService: LanguageService,
-    public themeService: ThemeService
+    public themeService: ThemeService,
+    private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
@@ -67,5 +69,10 @@ export class AppComponent implements OnInit {
 
     const savedLang = (localStorage.getItem('preferredLanguage') || 'en') as 'en' | 'fr';
     this.languageService.setLanguage(savedLang);
+
+    // Initialize SEO
+    this.seoService.setDefaultMetadata();
+    this.seoService.addStructuredData(this.seoService.getOrganizationSchema());
+    this.seoService.addStructuredData(this.seoService.getLocalBusinessSchema());
   }
 }
