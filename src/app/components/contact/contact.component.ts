@@ -144,6 +144,11 @@ export class ContactComponent implements OnInit, OnDestroy {
       content: 'frenchteautechsolution@gmail.com<br>contact@frenchteautech.ca'
     },
     {
+      icon: '📞',
+      labelKey: 'CONTACT.PHONELABEL',
+      contentKey: '(416) 277-8097'
+    },
+    {
       icon: '🕒',
       labelKey: 'CONTACT.HOURS',
       contentKey: 'CONTACT.HOURSTEXT'
