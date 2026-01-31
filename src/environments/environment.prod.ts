@@ -7,6 +7,7 @@ export const environment = {
     },
     contact: {
         toEmail: 'info@frenchteautech.com',
-        fromDomain: 'frenchteautech.com'
+        fromDomain: 'frenchteautech.com',
+        mailSubject: 'New Contact Form Submission'
     }
 };

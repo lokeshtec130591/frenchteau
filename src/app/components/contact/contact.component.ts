@@ -15,7 +15,7 @@ function noWhitespaceOnlyValidator(control: AbstractControl): ValidationErrors |
   if (!control.value) {
     return null; // Empty is handled by required validator
   }
-  
+
   const isWhitespaceOnly = control.value.trim().length === 0;
   return isWhitespaceOnly ? { whitespaceOnly: { value: control.value } } : null;
 }
@@ -46,7 +46,7 @@ function noWhitespaceOnlyValidator(control: AbstractControl): ValidationErrors |
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
               <label>{{ 'CONTACT.NAMELABEL' | translate }} <span class="required">*</span></label>
-              <input type="text" formControlName="name" (blur)="markFieldAsTouched('name')">
+              <input type="text" formControlName="name">
               <span class="error-message" *ngIf="isFieldInvalid('name')">
                 <span *ngIf="contactForm.get('name')?.errors?.['required']">
                   {{ 'CONTACT.NAMEERROR' | translate }}
@@ -58,7 +58,7 @@ function noWhitespaceOnlyValidator(control: AbstractControl): ValidationErrors |
             </div>
             <div class="form-group">
               <label>{{ 'CONTACT.EMAILLABEL' | translate }} <span class="required">*</span></label>
-              <input type="email" formControlName="email" (blur)="markFieldAsTouched('email')">
+              <input type="email" formControlName="email">
               <span class="error-message" *ngIf="isFieldInvalid('email')">
                 <span *ngIf="contactForm.get('email')?.errors?.['required']">
                   {{ 'CONTACT.EMAILERROR' | translate }}
@@ -77,7 +77,7 @@ function noWhitespaceOnlyValidator(control: AbstractControl): ValidationErrors |
                      formControlName="phone" 
                      appPhoneFormat 
                      placeholder="(XXX) XXX-XXXX"
-                     (blur)="markFieldAsTouched('phone')">
+                     >
               <span class="error-message" *ngIf="isFieldInvalid('phone')">
                 <span *ngIf="contactForm.get('phone')?.errors?.['required']">
                   {{ 'CONTACT.PHONEERROR' | translate }}
@@ -89,7 +89,7 @@ function noWhitespaceOnlyValidator(control: AbstractControl): ValidationErrors |
             </div>
             <div class="form-group">
               <label>{{ 'CONTACT.MESSAGELABEL' | translate }} <span class="required">*</span></label>
-              <textarea formControlName="message" (blur)="markFieldAsTouched('message')"></textarea>
+              <textarea formControlName="message" ></textarea>
               <span class="error-message" *ngIf="isFieldInvalid('message')">
                 <span *ngIf="contactForm.get('message')?.errors?.['required']">
                   {{ 'CONTACT.MESSAGEERROR' | translate }}
@@ -105,7 +105,7 @@ function noWhitespaceOnlyValidator(control: AbstractControl): ValidationErrors |
             <div class="form-message error" *ngIf="errorMessage">
               {{ errorMessage | translate }}
             </div>
-            <button type="submit" class="submit-btn" [disabled]="!contactForm.valid || isSubmitting">
+            <button type="submit" class="submit-btn" [disabled]="this.isSubmitting">
               {{ isSubmitting ? ('CONTACT.SENDING' | translate) : ('CONTACT.SUBMITBUTTON' | translate) }}
             </button>
           </form>
@@ -141,7 +141,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     {
       icon: '📧',
       labelKey: 'CONTACT.EMAIL',
-      content: 'info&#64;frenchteautech.com<br>support&#64;frenchteautech.com'
+      content: 'frenchteautechsolution@gmail.com<br>contact@frenchteautech.ca'
     },
     {
       icon: '🕒',
@@ -171,13 +171,6 @@ export class ContactComponent implements OnInit, OnDestroy {
     return !!(field && field.invalid && (field.dirty || field.touched));
   }
 
-  markFieldAsTouched(fieldName: string): void {
-    const field = this.contactForm.get(fieldName);
-    if (field) {
-      field.markAsTouched();
-    }
-  }
-
   ngOnInit(): void {
     emailjs.init(environment.emailjs.publicKey);
   }
@@ -188,12 +181,9 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
-    // Mark all fields as touched to show validation errors
-    Object.keys(this.contactForm.controls).forEach(key => {
-      this.contactForm.get(key)?.markAsTouched();
-    });
 
     if (!this.contactForm.valid || this.isSubmitting) {
+      this.contactForm.markAllAsTouched();
       return;
     }
 
@@ -211,7 +201,8 @@ export class ContactComponent implements OnInit, OnDestroy {
       message: formValue.message,
       submitted_date: now.toLocaleDateString(),
       submitted_time: now.toLocaleTimeString(),
-      domain_name: environment.contact.fromDomain
+      domain_name: environment.contact.fromDomain,
+      mail_subject: environment.contact.mailSubject
     };
 
     console.log('Sending email with params:', templateParams);

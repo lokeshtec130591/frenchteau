@@ -57,7 +57,7 @@ export class FooterComponent {
       links: [
         { label: '510 rue Main', url: '#', isTranslated: false },
         { label: 'Hudson, QC J0P 1H0', url: '#', isTranslated: false },
-        { label: 'info&#64;frenchteautech.com', url: '#', isTranslated: false },
+        { label: 'frenchteautechsolution@gmail.com', url: '#', isTranslated: false },
         { label: 'FOOTER.BUSINESSHOURS', url: '#', isTranslated: true }
       ]
     }

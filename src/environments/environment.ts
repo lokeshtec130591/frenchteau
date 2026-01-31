@@ -7,6 +7,7 @@ export const environment = {
     },
     contact: {
         toEmail: 'maniveluideveloper@gmail.com',
-        fromDomain: 'localhost'
+        fromDomain: 'localhost',
+        mailSubject: 'New Contact Form Submission'
     }
 };
