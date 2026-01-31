@@ -13,6 +13,7 @@ import { FooterLink, FooterSection } from '../../models';
         <div class="footer-about">
           <h3>{{ 'FOOTER.COMPANY' | translate }}</h3>
           <p>{{ 'FOOTER.ABOUTTEXT' | translate }}</p>
+          <p>{{ 'FOOTER.ABOUTTEXT1' | translate }}</p>
         </div>
 
         <div class="footer-section" *ngFor="let section of footerSections">
@@ -30,7 +31,15 @@ import { FooterLink, FooterSection } from '../../models';
       </div>
     </footer>
   `,
-  styles: []
+  styles: [`
+    .footer-about p {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-about p:last-of-type {
+      margin-bottom: 0;
+    }
+  `]
 })
 export class FooterComponent {
   footerSections: FooterSection[] = [

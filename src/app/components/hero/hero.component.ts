@@ -14,7 +14,7 @@ import { FeatureBannerItem } from '../../models';
         <div class="hero-text">
           <div class="lang-section active">
             <h1>
-              <span class="word">{{ 'HERO.TITLE1' | translate }}</span>
+              <span class="word me-4">{{ 'HERO.TITLE1' | translate }}</span>
               <span class="word gradient-text">{{ 'HERO.TITLE2' | translate }}</span>
               <span class="word gradient-text">{{ 'HERO.TITLE3' | translate }}</span><br>
               <span class="word">{{ 'HERO.TITLE4' | translate }}</span>

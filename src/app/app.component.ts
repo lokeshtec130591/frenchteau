@@ -16,6 +16,7 @@ import { CtaComponent } from './components/cta/cta.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,8 @@ import { BackgroundComponent } from './components/background/background.componen
     CtaComponent,
     ContactComponent,
     FooterComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    ScrollToTopComponent
   ],
   template: `
     <app-background></app-background>
@@ -49,6 +51,7 @@ import { BackgroundComponent } from './components/background/background.componen
     <app-cta></app-cta>
     <app-contact></app-contact>
     <app-footer></app-footer>
+    <app-scroll-to-top></app-scroll-to-top>
     <router-outlet></router-outlet>
   `,
   styles: []
