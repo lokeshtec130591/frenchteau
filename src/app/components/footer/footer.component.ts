@@ -11,7 +11,7 @@ import { FooterLink, FooterSection } from '../../models';
     <footer>
       <div class="footer-content">
         <div class="footer-about">
-          <h3>SFT</h3>
+          <h3>{{ 'FOOTER.COMPANY' | translate }}</h3>
           <p>{{ 'FOOTER.ABOUTTEXT' | translate }}</p>
         </div>
 

@@ -27,10 +27,11 @@
     "SUPPORTAVAILABLE": "Support disponible"
   },
   "ABOUT": {
-    "TITLE": "À propos de",
+    "TITLE": "À PROPOS DE NOUS",
     "COMPANY": "Solutions Frenchteau Tech",
-    "DESCRIPTION1": "est une entreprise individuelle de confiance située à Hudson, Québec. Nous sommes spécialisés dans la fourniture de services informatiques complets qui permettent aux entreprises de fonctionner efficacement et en toute sécurité.",
-    "DESCRIPTION2": "Avec plus d'une décennie d'expérience, nous comprenons les défis uniques auxquels font face les entreprises québécoises. Notre mission est simple : fournir des solutions informatiques fiables et professionnelles qui vous permettent de vous concentrer sur ce que vous faites de mieux.",
+    "DESCRIPTION1": "est un fournisseur de services informatiques de confiance basé à Hudson, Québec. Nous nous spécialisons dans les services informatiques qui soutiennent les entreprises dans leurs besoins technologiques quotidiens.",
+    "DESCRIPTION2": "Nos services incluent la gestion des systèmes, l'installation de systèmes, la réparation d'ordinateurs et de matériel, la gestion et la protection des données, la récupération de données, et la maintenance et réparation de machines de débit et crédit.",
+    "DESCRIPTION3": "Nous nous engageons à fournir des solutions fiables, professionnelles et rentables. Notre objectif est d'aider les entreprises à fonctionner efficacement, en toute sécurité et avec confiance dans leur technologie.",
     "CERTIFIED": "Professionnels certifiés",
     "CERTIFIEDDESC": "Notre équipe détient des certifications reconnues dans l'industrie et se tient à jour avec les tendances technologiques.",
     "EXPERTISE": "Expertise locale",
@@ -40,35 +41,35 @@
   },
   "SERVICES": {
     "TITLE": "Nos Services",
-    "SUBTITLE": "Solutions informatiques complètes adaptées aux besoins de votre entreprise",
-    "SYSTEMMANAGEMENT": "Gestion des systèmes",
-    "SYSTEMMANAGEMENTDESC": "Gestion complète de l'infrastructure avec surveillance 24/7, maintenance automatisée et optimisation proactive des systèmes pour assurer une disponibilité maximale.",
-    "DATASOLUTIONS": "Solutions de données",
-    "DATASOLUTIONSDESC": "Traitement sécurisé des données, solutions de sauvegarde, intégration du stockage cloud et systèmes de gestion intelligents pour protéger vos données d'entreprise précieuses.",
-    "PAYMENTSYSTEMS": "Systèmes de paiement",
-    "PAYMENTSYSTEMSDESC": "Intégration sécurisée des systèmes débit/crédit, solutions de conformité PCI et traitement fiable des transactions pour des opérations de paiement sûres.",
-    "TECHNICALSUPPORT": "Support technique",
-    "TECHNICALSUPPORTDESC": "Réparation de matériel expert, dépannage des systèmes et assistance technique à réponse rapide disponible quand votre entreprise en a le plus besoin.",
-    "ITCONSULTING": "Conseil informatique",
-    "ITCONSULTINGDESC": "Planification technologique stratégique, conception d'architecture, évaluations de sécurité et accompagnement de transformation numérique pour un succès à long terme.",
-    "CONTRACTSERVICES": "Services contractuels",
-    "CONTRACTSERVICESDESC": "Services informatiques contractuels flexibles personnalisés selon vos exigences commerciales uniques et votre horaire opérationnel."
+    "SUBTITLE": "Nos Services informatiques et informatiques",
+    "SYSTEMMANAGEMENT": "Gestion et support des systèmes",
+    "SYSTEMMANAGEMENTDESC": "Nous fournissons une surveillance continue des systèmes, une maintenance et un support pour assurer que vos ordinateurs et votre infrastructure informatique fonctionnent de manière fiable.",
+    "DATASOLUTIONS": "Installation et configuration des systèmes",
+    "DATASOLUTIONSDESC": "Installation et configuration professionnelles des ordinateurs, des systèmes d'exploitation, des logiciels et des composants réseau adaptés aux exigences de votre entreprise.",
+    "PAYMENTSYSTEMS": "Réparation informatique et matérielle",
+    "PAYMENTSYSTEMSDESC": "Services de réparation pour les ordinateurs de bureau, les ordinateurs portables et les moniteurs, y compris les écrans cassés, les défauts matériels et les problèmes de composants.",
+    "TECHNICALSUPPORT": "Gestion et protection des données",
+    "TECHNICALSUPPORTDESC": "Manipulation sécurisée, organisation et protection des données commerciales pour prévenir les pertes et assurer la confidentialité.",
+    "ITCONSULTING": "Services de récupération de données",
+    "ITCONSULTINGDESC": "Récupération des données perdues, supprimées ou corrompues à partir d'ordinateurs et de périphériques de stockage.",
+    "CONTRACTSERVICES": "Services de machines de débit et de crédit",
+    "CONTRACTSERVICESDESC": "Installation, maintenance et réparation des machines de débit et de crédit pour assurer un traitement des paiements fluide et ininterrompu."
   },
   "BENEFITS": {
     "TITLE": "Pourquoi nous choisir",
-    "SUBTITLE": "Les avantages de collaborer avec Solutions Frenchteau Tech",
+    "SUBTITLE": "Améliorer la clarté et mettre l'accent sur les avantages",
     "TAILORED": "Solutions sur mesure",
-    "TAILOREDDESC": "Nous ne croyons pas aux solutions universelles. Chaque solution est personnalisée pour correspondre à vos besoins, objectifs et budget spécifiques.",
+    "TAILOREDDESC": "Nous personnalisons chaque solution en fonction de vos besoins spécifiques et de votre budget.",
     "RAPID": "Réponse rapide",
-    "RAPIDDESC": "Les problèmes techniques ne peuvent pas attendre. Notre équipe fournit un support rapide et efficace pour minimiser les temps d'arrêt.",
+    "RAPIDDESC": "Assistance technique rapide et fiable chaque fois que vous en avez besoin.",
     "SECURITY": "Sécurité d'abord",
-    "SECURITYDESC": "Nous priorisons la sécurité des données et la conformité, en mettant en œuvre les meilleures pratiques de l'industrie pour protéger votre entreprise.",
-    "COST": "Rentable",
-    "COSTDESC": "Obtenez des services informatiques de niveau entreprise sans prix d'entreprise. Nous offrons une valeur maximale tout en respectant votre budget.",
-    "SCALABLE": "Croissance évolutive",
-    "SCALABLEDESC": "Nos solutions évoluent avec votre entreprise. Nous concevons des systèmes qui peuvent évoluer de manière transparente selon vos besoins.",
-    "PARTNERSHIP": "Partenariat à long terme",
-    "PARTNERSHIPDESC": "Nous ne sommes pas que des fournisseurs—nous sommes des partenaires investis dans votre succès. Nous construisons des relations durables."
+    "SECURITYDESC": "Nous priorisons la protection des données et suivons les meilleures pratiques pour assurer la sécurité de vos systèmes.",
+    "COST": "Services abordables",
+    "COSTDESC": "Support informatique de haute qualité sans prix élevé.",
+    "SCALABLE": "Services évolutifs",
+    "SCALABLEDESC": "Nos solutions évoluent avec votre entreprise à mesure que vos besoins changent.",
+    "PARTNERSHIP": "Partenariat de confiance",
+    "PARTNERSHIPDESC": "Nous visons à établir des relations durables avec nos clients fondées sur la confiance et les résultats."
   },
   "PROCESS": {
     "TITLE": "Comment nous travaillons",
@@ -85,17 +86,17 @@
   "TESTIMONIALS": {
     "TITLE": "Ce que disent nos clients",
     "SUBTITLE": "Commentaires réels d'entreprises que nous avons aidées",
-    "CLIENT1": "\"SFT a complètement transformé notre infrastructure informatique. Leur équipe est professionnelle, réactive et comprend vraiment les besoins des entreprises. Hautement recommandé!\"",
+    "CLIENT1": "Solutions Frenchteau Tech a fourni une réparation informatique excellente et une configuration système pour notre bureau. Professionnel, réactif et très compétent. Hautement recommandé!",
     "CLIENT1ROLE": "PDG, Chaîne de vente au détail locale",
-    "CLIENT2": "\"Service exceptionnel! Ils ont implémenté notre système de paiement parfaitement et ont fourni une excellente formation. Nos opérations n'ont jamais été aussi fluides.\"",
+    "CLIENT2": "Excellent service et support rapide. Ils ont résolu nos problèmes système et nous ont aidés à sécuriser nos données. Très fiables et faciles à travailler.",
     "CLIENT2ROLE": "Propriétaire, Boutique",
-    "CLIENT3": "\"Le meilleur partenaire informatique que nous ayons jamais eu. Temps de réponse rapides, connaissances d'expert et ils se soucient vraiment de notre succès. Vaut chaque centime!\"",
+    "CLIENT3": "Excellente expérience dans l'ensemble. Communication claire, service rapide et support informatique fiable. Nous leur faisons confiance pour nos systèmes.",
     "CLIENT3ROLE": "Gestionnaire, Entreprise de fabrication"
   },
   "CTA": {
-    "TITLE": "Prêt à transformer votre informatique?",
-    "DESCRIPTION": "Discutons de la façon dont nous pouvons aider votre entreprise à prospérer avec des solutions technologiques modernes.",
-    "BUTTON": "Commencer aujourd'hui"
+    "TITLE": "Prêt à améliorer vos systèmes informatiques?",
+    "DESCRIPTION": "Laissez Solutions Frenchteau Tech s'occuper de vos besoins technologiques afin que vous puissiez vous concentrer sur votre entreprise. Que vous ayez besoin d'installation système, de réparations, de protection de données ou de support de machines de paiement, nous sommes là pour",
+    "BUTTON": "Contactez-nous"
   },
   "CONTACT": {
     "TITLE": "Nous Contacter",
@@ -122,7 +123,8 @@
     "ERROR": "Échec de l'envoi du message. Veuillez réessayer."
   },
   "FOOTER": {
-    "ABOUTTEXT": "Solutions Frenchteau Tech fournit des services informatiques professionnels aux entreprises du Québec. Nous nous engageons à fournir des solutions informatiques fiables, sécurisées et innovantes.",
+    "COMPANY": "Solutions Frenchteau Tech",
+    "ABOUTTEXT": "Solutions Frenchteau Tech est un fournisseur de services informatiques de confiance basé à Hudson, Québec. Nous nous spécialisons dans les services informatiques qui soutiennent les entreprises dans leurs besoins technologiques quotidiens.",
     "QUICKLINKS": "Liens rapides",
     "HOME": "Accueil",
     "ABOUT": "À propos de nous",

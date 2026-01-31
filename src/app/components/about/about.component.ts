@@ -12,9 +12,10 @@ import { AboutFeature } from '../../models';
     <section class="about scroll-reveal" id="about" appScrollReveal>
       <div class="about-container">
         <div class="about-content">
-          <h2>{{ 'ABOUT.TITLE' | translate }} <span class="gradient-text">SFT</span></h2>
-          <p><strong>{{ 'ABOUT.COMPANY' | translate }}</strong> {{ 'ABOUT.DESCRIPTION1' | translate }}</p>
+          <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
+          <p><strong><span class="gradient-text">{{ 'ABOUT.COMPANY' | translate }}</span></strong> {{ 'ABOUT.DESCRIPTION1' | translate }}</p>
           <p>{{ 'ABOUT.DESCRIPTION2' | translate }}</p>
+          <p>{{ 'ABOUT.DESCRIPTION3' | translate }}</p>
 
           <div class="about-features">
             <div class="feature-item" *ngFor="let feature of aboutFeatures">
