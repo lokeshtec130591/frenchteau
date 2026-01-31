@@ -1,16 +1,29 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
-import { ContactInfo, FormData } from '../../models';
+import { PhoneFormatDirective } from '../../directives/phone-format.directive';
+import { ContactInfo } from '../../models';
 import emailjs from '@emailjs/browser';
 import { environment } from '../../../environments/environment';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
+// Custom validator for whitespace-only input
+function noWhitespaceOnlyValidator(control: AbstractControl): ValidationErrors | null {
+  if (!control.value) {
+    return null; // Empty is handled by required validator
+  }
+  
+  const isWhitespaceOnly = control.value.trim().length === 0;
+  return isWhitespaceOnly ? { whitespaceOnly: { value: control.value } } : null;
+}
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, TranslateModule, FormsModule, ScrollRevealDirective],
+  imports: [CommonModule, TranslateModule, ReactiveFormsModule, ScrollRevealDirective, PhoneFormatDirective],
   template: `
     <section class="contact scroll-reveal" id="contact" appScrollReveal>
       <div class="contact-container">
@@ -30,33 +43,60 @@ import { environment } from '../../../environments/environment';
         </div>
 
         <div class="contact-form">
-          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
               <label>{{ 'CONTACT.NAMELABEL' | translate }} <span class="required">*</span></label>
-              <input type="text" [(ngModel)]="formData.name" name="name" required>
-              <span class="error-message" *ngIf="contactForm.submitted && contactForm.controls['name']?.invalid">
-                {{ 'CONTACT.NAMEERROR' | translate }}
+              <input type="text" formControlName="name" (blur)="markFieldAsTouched('name')">
+              <span class="error-message" *ngIf="isFieldInvalid('name')">
+                <span *ngIf="contactForm.get('name')?.errors?.['required']">
+                  {{ 'CONTACT.NAMEERROR' | translate }}
+                </span>
+                <span *ngIf="contactForm.get('name')?.errors?.['whitespaceOnly']">
+                  {{ 'CONTACT.NAMEWHITESPACEERROR' | translate }}
+                </span>
               </span>
             </div>
             <div class="form-group">
               <label>{{ 'CONTACT.EMAILLABEL' | translate }} <span class="required">*</span></label>
-              <input type="email" [(ngModel)]="formData.email" name="email" required email>
-              <span class="error-message" *ngIf="contactForm.submitted && contactForm.controls['email']?.invalid">
-                {{ 'CONTACT.EMAILERROR' | translate }}
+              <input type="email" formControlName="email" (blur)="markFieldAsTouched('email')">
+              <span class="error-message" *ngIf="isFieldInvalid('email')">
+                <span *ngIf="contactForm.get('email')?.errors?.['required']">
+                  {{ 'CONTACT.EMAILERROR' | translate }}
+                </span>
+                <span *ngIf="contactForm.get('email')?.errors?.['email']">
+                  {{ 'CONTACT.EMAILERROR' | translate }}
+                </span>
+                <span *ngIf="contactForm.get('email')?.errors?.['whitespaceOnly']">
+                  {{ 'CONTACT.EMAILWHITESPACEERROR' | translate }}
+                </span>
               </span>
             </div>
             <div class="form-group">
               <label>{{ 'CONTACT.PHONELABEL' | translate }} <span class="required">*</span></label>
-              <input type="tel" [(ngModel)]="formData.phone" name="phone" required>
-              <span class="error-message" *ngIf="contactForm.submitted && contactForm.controls['phone']?.invalid">
-                {{ 'CONTACT.PHONEERROR' | translate }}
+              <input type="tel" 
+                     formControlName="phone" 
+                     appPhoneFormat 
+                     placeholder="(XXX) XXX-XXXX"
+                     (blur)="markFieldAsTouched('phone')">
+              <span class="error-message" *ngIf="isFieldInvalid('phone')">
+                <span *ngIf="contactForm.get('phone')?.errors?.['required']">
+                  {{ 'CONTACT.PHONEERROR' | translate }}
+                </span>
+                <span *ngIf="contactForm.get('phone')?.errors?.['invalidPhone']">
+                  {{ 'CONTACT.PHONEINVALIDERROR' | translate }}
+                </span>
               </span>
             </div>
             <div class="form-group">
               <label>{{ 'CONTACT.MESSAGELABEL' | translate }} <span class="required">*</span></label>
-              <textarea [(ngModel)]="formData.message" name="message" required></textarea>
-              <span class="error-message" *ngIf="contactForm.submitted && contactForm.controls['message']?.invalid">
-                {{ 'CONTACT.MESSAGEERROR' | translate }}
+              <textarea formControlName="message" (blur)="markFieldAsTouched('message')"></textarea>
+              <span class="error-message" *ngIf="isFieldInvalid('message')">
+                <span *ngIf="contactForm.get('message')?.errors?.['required']">
+                  {{ 'CONTACT.MESSAGEERROR' | translate }}
+                </span>
+                <span *ngIf="contactForm.get('message')?.errors?.['whitespaceOnly']">
+                  {{ 'CONTACT.MESSAGEWHITESPACEERROR' | translate }}
+                </span>
               </span>
             </div>
             <div class="form-message success" *ngIf="successMessage">
@@ -65,7 +105,7 @@ import { environment } from '../../../environments/environment';
             <div class="form-message error" *ngIf="errorMessage">
               {{ errorMessage | translate }}
             </div>
-            <button type="submit" class="submit-btn" [disabled]="isSubmitting">
+            <button type="submit" class="submit-btn" [disabled]="!contactForm.valid || isSubmitting">
               {{ isSubmitting ? ('CONTACT.SENDING' | translate) : ('CONTACT.SUBMITBUTTON' | translate) }}
             </button>
           </form>
@@ -85,19 +125,12 @@ import { environment } from '../../../environments/environment';
       }
     `]
 })
-export class ContactComponent implements OnInit {
-  @ViewChild('contactForm') form!: NgForm;
-
-  formData: FormData = {
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  };
-
+export class ContactComponent implements OnInit, OnDestroy {
+  contactForm!: FormGroup;
   isSubmitting = false;
   successMessage = '';
   errorMessage = '';
+  private destroy$ = new Subject<void>();
 
   contactInfo: ContactInfo[] = [
     {
@@ -117,14 +150,50 @@ export class ContactComponent implements OnInit {
     }
   ];
 
-  constructor(private translateService: TranslateService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private translateService: TranslateService
+  ) {
+    this.initializeForm();
+  }
+
+  private initializeForm(): void {
+    this.contactForm = this.formBuilder.group({
+      name: ['', [Validators.required, noWhitespaceOnlyValidator]],
+      email: ['', [Validators.required, Validators.email, noWhitespaceOnlyValidator]],
+      phone: ['', [Validators.required]],
+      message: ['', [Validators.required, noWhitespaceOnlyValidator]]
+    });
+  }
+
+  isFieldInvalid(fieldName: string): boolean {
+    const field = this.contactForm.get(fieldName);
+    return !!(field && field.invalid && (field.dirty || field.touched));
+  }
+
+  markFieldAsTouched(fieldName: string): void {
+    const field = this.contactForm.get(fieldName);
+    if (field) {
+      field.markAsTouched();
+    }
+  }
 
   ngOnInit(): void {
     emailjs.init(environment.emailjs.publicKey);
   }
 
-  onSubmit(form: NgForm): void {
-    if (!form.valid || this.isSubmitting) {
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
+  onSubmit(): void {
+    // Mark all fields as touched to show validation errors
+    Object.keys(this.contactForm.controls).forEach(key => {
+      this.contactForm.get(key)?.markAsTouched();
+    });
+
+    if (!this.contactForm.valid || this.isSubmitting) {
       return;
     }
 
@@ -133,12 +202,13 @@ export class ContactComponent implements OnInit {
     this.errorMessage = '';
 
     const now = new Date();
+    const formValue = this.contactForm.value;
     const templateParams = {
       to_email: environment.contact.toEmail,
-      from_name: this.formData.name,
-      from_email: this.formData.email,
-      phone: this.formData.phone,
-      message: this.formData.message,
+      from_name: formValue.name,
+      from_email: formValue.email,
+      phone: formValue.phone,
+      message: formValue.message,
       submitted_date: now.toLocaleDateString(),
       submitted_time: now.toLocaleTimeString(),
       domain_name: environment.contact.fromDomain
@@ -149,16 +219,16 @@ export class ContactComponent implements OnInit {
     emailjs.send(environment.emailjs.serviceId, environment.emailjs.templateId, templateParams)
       .then(() => {
         console.log('Email sent successfully');
-        this.translateService.get('CONTACT.SUCCESS').subscribe(translated => {
+        this.translateService.get('CONTACT.SUCCESS').pipe(takeUntil(this.destroy$)).subscribe(translated => {
           this.successMessage = translated;
         });
         this.resetForm();
         this.isSubmitting = false;
-        form.resetForm();
+        setTimeout(() => { this.successMessage = ''; }, 3000);
       })
       .catch((error) => {
         console.error('Email send error:', error);
-        this.translateService.get('CONTACT.ERROR').subscribe(translated => {
+        this.translateService.get('CONTACT.ERROR').pipe(takeUntil(this.destroy$)).subscribe(translated => {
           this.errorMessage = translated;
         });
         this.isSubmitting = false;
@@ -166,7 +236,10 @@ export class ContactComponent implements OnInit {
   }
 
   private resetForm(): void {
-    this.formData = { name: '', email: '', phone: '', message: '' };
-    setTimeout(() => { this.successMessage = ''; }, 3000);
+    this.contactForm.reset();
+    Object.keys(this.contactForm.controls).forEach(key => {
+      this.contactForm.get(key)?.markAsUntouched();
+      this.contactForm.get(key)?.markAsPristine();
+    });
   }
 }

@@ -1391,3 +1391,19 @@ footer {
         font-size: 2.2rem;
     }
 }
+
+.success {
+    color: #0d722b;
+    background: rgb(19 199 22 / 21%);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.error {
+    color: red;
+    background: #ff00002b;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
