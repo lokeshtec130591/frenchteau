@@ -22,9 +22,7 @@ import { ThemeService } from '../../services/theme.service';
   `,
     styles: [`
     .scroll-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
+      position: relative;
       width: 3rem;
       height: 3rem;
       border-radius: 50%;
@@ -38,7 +36,6 @@ import { ThemeService } from '../../services/theme.service';
       font-size: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease;
-      z-index: 999;
       opacity: 0.9;
     }
 
@@ -71,13 +68,6 @@ import { ThemeService } from '../../services/theme.service';
     }
 
     @media (max-width: 768px) {
-      .scroll-to-top {
-        width: 2.5rem;
-        height: 2.5rem;
-        bottom: 1.5rem;
-        right: 1.5rem;
-      }
-
       .scroll-to-top svg {
         width: 1rem;
         height: 1rem;

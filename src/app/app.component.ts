@@ -17,6 +17,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BackgroundComponent } from './components/background/background.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
 
 @Component({
   selector: 'app-root',
@@ -36,7 +37,8 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     ContactComponent,
     FooterComponent,
     BackgroundComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    WhatsappButtonComponent
   ],
   template: `
     <app-background></app-background>
@@ -51,10 +53,25 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     <app-cta></app-cta>
     <app-contact></app-contact>
     <app-footer></app-footer>
-    <app-scroll-to-top></app-scroll-to-top>
+    <div class="floating-buttons">
+      <app-scroll-to-top></app-scroll-to-top>
+      <app-whatsapp-button></app-whatsapp-button>
+    </div>
     <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [`
+    .floating-buttons {
+      display: flex;
+      flex-direction: row;
+      flex-flow: column;
+      align-items: center;
+      gap: 10px;
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 998;
+    }
+  `]
 })
 export class AppComponent implements OnInit {
   title = 'frenchteau-tech-solutions';
