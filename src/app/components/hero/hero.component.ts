@@ -20,6 +20,7 @@ import { FeatureBannerItem } from '../../models';
               <span class="word">{{ 'HERO.TITLE4' | translate }}</span>
             </h1>
             <p>{{ 'HERO.DESCRIPTION' | translate }}</p>
+            <p>{{ 'FOOTER.ABOUTTEXT1' | translate }}</p>
             <div class="hero-buttons">
               <a href="#services" class="btn btn-primary">{{ 'HERO.BUTTONSERVICES' | translate }}</a>
               <a href="#contact" class="btn btn-outline">{{ 'HERO.BUTTONSTART' | translate }}</a>

@@ -10,9 +10,9 @@
     "TITLE2": "IT",
     "TITLE3": "Solutions",
     "TITLE4": "for Your Business",
-    "DESCRIPTION": "Professional computer services designed for reliability, security, and growth. Serving businesses across Québec with expertise you can trust.",
+    "DESCRIPTION": "We provides reliable computer and IT services for businesses. From system installation and repairs to data protection and payment machine support, we help keep your technology running smoothly and securely.",
     "BUTTONSERVICES": "View Services",
-    "BUTTONSTART": "Get Started"
+    "BUTTONSTART": "Contact Us"
   },
   "FEATURES": {
     "SUPPORT": "Fast Support",
@@ -134,6 +134,6 @@
     "SERVICESTITLE": "Services",
     "CONTACTTITLE": "Contact",
     "BUSINESSHOURS": "Mon-Fri: 9 AM - 6 PM",
-    "COPYRIGHT": "© 2026 Solutions Frenchteau Tech. All rights reserved. Computer-Related Services • Québec, Canada"
+    "COPYRIGHT": "© 2026 Frenchteau Tech Solutions. All rights reserved. Computer-Related Services • Québec, Canada"
   }
 }
